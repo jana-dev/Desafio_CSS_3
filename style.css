@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #dddddd;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tooltip {
+    background: #776d8a;
+    color: #ffffff;
+    padding: 1em;
+    border-radius: 10px;
+    width: 200px;
+    clip-path: circle(10% at 90% 20%); /*primeiro valor se refere ao raio, depois do at são os eixo x e y */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.tooltip:hover {
+    clip-path: circle(100%);
+}
+
+.tooltip .icon {
+    float: right;
+    font-weight: bold;
+    margin-right: 1%;
+    margin-bottom: 40%;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .icon {
+    opacity: 0;
+}
